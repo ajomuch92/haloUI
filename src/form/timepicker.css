@@ -1,0 +1,38 @@
+@layer components {
+  /* Timepicker container */
+  .timepicker {
+    @apply relative inline-block;
+  }
+  .timepicker-input {
+    @apply w-full;
+  }
+  .timepicker-dropdown {
+    @apply absolute top-full left-0 z-20 mt-1 bg-white rounded-lg shadow-lg p-4 hidden min-w-48;
+    border: 1px solid var(--color-grey);
+  }
+  .timepicker.active .timepicker-dropdown {
+    @apply block;
+  }
+
+  /* Time selectors (hour, minute, period) */
+  .timepicker-selectors {
+    @apply flex gap-2 justify-center items-center;
+  }
+  .timepicker-hour,
+  .timepicker-minute,
+  .timepicker-period {
+    @apply text-center;
+  }
+  .timepicker-hour select,
+  .timepicker-minute select,
+  .timepicker-period select {
+    @apply w-20 py-2 px-1 text-center;
+  }
+  .timepicker-period select {
+    @apply w-16;
+  }
+  .timepicker-separator {
+    @apply text-xl font-bold;
+    color: var(--color-dark);
+  }
+}

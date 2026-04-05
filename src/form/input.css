@@ -1,0 +1,34 @@
+@layer components {
+  .input {
+    @apply w-full px-3 py-2 rounded-md border transition focus:outline-none focus:ring-2;
+    background-color: white;
+    border-color: var(--color-grey);
+    color: var(--color-dark);
+  }
+  .input:focus {
+    border-color: var(--color-primary);
+    ring-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  }
+
+  /* Colors */
+  .input.primary { border-color: var(--color-primary); }
+  .input.link { border-color: var(--color-link); }
+  .input.info { border-color: var(--color-info); }
+  .input.success { border-color: var(--color-success); }
+  .input.warning { border-color: var(--color-warning); }
+  .input.danger { border-color: var(--color-danger); }
+
+  /* Sizes */
+  .input.small { @apply text-sm py-1; }
+  .input.medium { @apply text-base py-2.5; }
+  .input.large { @apply text-lg py-3; }
+
+  /* Rounded */
+  .input.rounded { @apply rounded-full; }
+
+  /* Disabled */
+  .input:disabled,
+  .input.disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+}

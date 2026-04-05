@@ -1,0 +1,119 @@
+@layer components {
+  /* Field container */
+  .field {
+    @apply mb-4;
+  }
+
+  /* Grouped fields (horizontal) */
+  .field.grouped {
+    @apply flex gap-2;
+  }
+  .field.grouped.centered {
+    @apply justify-center;
+  }
+  .field.grouped.right {
+    @apply justify-end;
+  }
+  .field.grouped .control.expanded {
+    @apply flex-1;
+  }
+
+  /* Label */
+  .label {
+    @apply block font-semibold mb-2;
+    color: var(--color-dark);
+  }
+
+  /* Help text */
+  .help {
+    @apply block text-sm mt-1;
+    color: var(--color-grey-dark);
+  }
+  .help.primary { color: var(--color-primary); }
+  .help.link { color: var(--color-link); }
+  .help.info { color: var(--color-info); }
+  .help.success { color: var(--color-success); }
+  .help.warning { color: var(--color-warning); }
+  .help.danger { color: var(--color-danger); }
+
+  /* Control wrapper */
+  .control {
+    @apply relative;
+  }
+
+  /* Icons inside control */
+  .control.has-icons-left .icon,
+  .control.has-icons-right .icon {
+    @apply absolute top-1/2 -translate-y-1/2 pointer-events-none;
+    color: var(--color-grey-dark);
+  }
+  .control.has-icons-left .icon {
+    @apply left-2;
+  }
+  .control.has-icons-right .icon {
+    @apply right-2;
+  }
+  .control.has-icons-left input,
+  .control.has-icons-left select,
+  .control.has-icons-left textarea {
+    @apply pl-8;
+  }
+  .control.has-icons-right input,
+  .control.has-icons-right select,
+  .control.has-icons-right textarea {
+    @apply pr-8;
+  }
+
+  /* Loading spinner inside control */
+  .control.loading::after {
+    content: "";
+    @apply absolute top-1/2 right-2 w-4 h-4 border-2 rounded-full animate-spin -translate-y-1/2;
+    border-color: var(--color-grey-dark) transparent transparent transparent;
+    border-top-color: var(--color-primary);
+  }
+
+  /* Sizes that affect inputs inside */
+  .control.small input,
+  .control.small select,
+  .control.small textarea {
+    @apply text-sm py-1;
+  }
+  .control.medium input,
+  .control.medium select,
+  .control.medium textarea {
+    @apply text-base py-2.5;
+  }
+  .control.large input,
+  .control.large select,
+  .control.large textarea {
+    @apply text-lg py-3;
+  }
+
+  /* Expanded control (full width) */
+  .control.expanded {
+    @apply w-full;
+  }
+
+  /* Addons (group of controls) */
+  .field.has-addons {
+    @apply flex;
+  }
+  .field.has-addons .control:not(:last-child) {
+    @apply mr-0;
+  }
+  .field.has-addons .control:first-child input,
+  .field.has-addons .control:first-child select,
+  .field.has-addons .control:first-child button {
+    @apply rounded-r-none;
+  }
+  .field.has-addons .control:last-child input,
+  .field.has-addons .control:last-child select,
+  .field.has-addons .control:last-child button {
+    @apply rounded-l-none;
+  }
+  .field.has-addons .control:not(:first-child):not(:last-child) input,
+  .field.has-addons .control:not(:first-child):not(:last-child) select,
+  .field.has-addons .control:not(:first-child):not(:last-child) button {
+    @apply rounded-none;
+  }
+}

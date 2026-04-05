@@ -1,0 +1,74 @@
+@layer components {
+  /* Datepicker container */
+  .datepicker {
+    @apply relative inline-block;
+  }
+  .datepicker-input {
+    @apply w-full;
+  }
+  .datepicker-dropdown {
+    @apply absolute top-full left-0 z-20 mt-1 bg-white rounded-lg shadow-lg p-4 hidden min-w-64;
+    border: 1px solid var(--color-grey);
+  }
+  .datepicker.active .datepicker-dropdown {
+    @apply block;
+  }
+
+  /* Header with month/year selection */
+  .datepicker-header {
+    @apply flex justify-between items-center mb-4 gap-2;
+  }
+  .datepicker-month-select,
+  .datepicker-year-select {
+    @apply flex gap-1;
+  }
+  .datepicker-month-select .select,
+  .datepicker-year-select .select {
+    @apply w-auto;
+  }
+  .datepicker-month-select select,
+  .datepicker-year-select select {
+    @apply py-1 px-2 text-sm;
+  }
+
+  /* Navigation buttons */
+  .datepicker-nav {
+    @apply flex gap-1;
+  }
+  .datepicker-nav button {
+    @apply w-7 h-7 rounded cursor-pointer border;
+    background-color: white;
+    border-color: var(--color-grey);
+    color: var(--color-dark);
+  }
+  .datepicker-nav button:hover {
+    background-color: var(--color-light);
+  }
+
+  /* Weekdays and days grid */
+  .datepicker-weekdays {
+    @apply grid grid-cols-7 text-center text-sm font-semibold mb-1;
+    color: var(--color-grey-dark);
+  }
+  .datepicker-days {
+    @apply grid grid-cols-7 gap-1;
+  }
+  .datepicker-day {
+    @apply flex items-center justify-center h-8 rounded cursor-pointer transition;
+    color: var(--color-dark);
+  }
+  .datepicker-day:hover {
+    background-color: var(--color-light);
+  }
+  .datepicker-day.selected {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  .datepicker-day.empty {
+    @apply cursor-default opacity-30;
+  }
+  .datepicker-day.today {
+    @apply font-bold;
+    border: 1px solid var(--color-primary);
+  }
+}

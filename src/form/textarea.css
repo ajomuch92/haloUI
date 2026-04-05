@@ -1,0 +1,37 @@
+@layer components {
+  .textarea {
+    @apply block w-full px-3 py-2 rounded-md border transition focus:outline-none focus:ring-2 resize-vertical;
+    background-color: white;
+    border-color: var(--color-grey);
+    color: var(--color-dark);
+  }
+  .textarea:focus {
+    border-color: var(--color-primary);
+    ring-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  }
+
+  /* Colors */
+  .textarea.primary { border-color: var(--color-primary); }
+  .textarea.link { border-color: var(--color-link); }
+  .textarea.info { border-color: var(--color-info); }
+  .textarea.success { border-color: var(--color-success); }
+  .textarea.warning { border-color: var(--color-warning); }
+  .textarea.danger { border-color: var(--color-danger); }
+
+  /* Sizes */
+  .textarea.small { @apply text-sm py-1; }
+  .textarea.medium { @apply text-base py-2.5; }
+  .textarea.large { @apply text-lg py-3; }
+
+  /* Rounded */
+  .textarea.rounded { @apply rounded-full; }
+
+  /* Fixed size (no resize) */
+  .textarea.fixed-size { @apply resize-none; }
+
+  /* Disabled */
+  .textarea:disabled,
+  .textarea.disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+}
