@@ -1,0 +1,49 @@
+@layer components {
+  .tabs {
+    @apply flex flex-wrap;
+    border-bottom: 1px solid var(--color-grey);
+  }
+  .tabs li {
+    @apply -mb-px;
+  }
+  .tabs li a {
+    @apply block px-4 py-2 border-b-2 transition cursor-pointer;
+    border-bottom-color: transparent;
+    color: var(--color-grey-dark);
+  }
+  .tabs li a:hover {
+    color: var(--color-dark);
+  }
+  .tabs li.active a {
+    border-bottom-color: var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+  /* Alignment */
+  .tabs.centered {
+    @apply justify-center;
+  }
+  .tabs.right {
+    @apply justify-end;
+  }
+  /* Sizes */
+  .tabs.small li a {
+    @apply text-sm px-2 py-1;
+  }
+  .tabs.medium li a {
+    @apply text-lg px-5 py-3;
+  }
+  .tabs.large li a {
+    @apply text-xl px-6 py-4;
+  }
+  /* Toggle style */
+  .tabs.toggle li a {
+    @apply border rounded-t-md -mb-px;
+    border-color: var(--color-grey);
+  }
+  .tabs.toggle li.active a {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
+}

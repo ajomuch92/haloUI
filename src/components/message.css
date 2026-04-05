@@ -1,0 +1,76 @@
+@layer components {
+  .message {
+    @apply rounded-lg overflow-hidden mb-4 w-full;
+  }
+  .message-header {
+    @apply px-4 py-2 font-bold;
+    background-color: var(--color-dark);
+    color: white;
+  }
+  .message-body {
+    @apply p-4;
+    background-color: var(--color-light);
+    border-left: 4px solid var(--color-dark);
+  }
+  /* Colors */
+  .message.primary .message-header {
+    background-color: var(--color-primary);
+  }
+  .message.primary .message-body {
+    border-left-color: var(--color-primary);
+  }
+  .message.link .message-header {
+    background-color: var(--color-link);
+  }
+  .message.link .message-body {
+    border-left-color: var(--color-link);
+  }
+  .message.info .message-header {
+    background-color: var(--color-info);
+  }
+  .message.info .message-body {
+    border-left-color: var(--color-info);
+  }
+  .message.success .message-header {
+    background-color: var(--color-success);
+  }
+  .message.success .message-body {
+    border-left-color: var(--color-success);
+  }
+  .message.warning .message-header {
+    background-color: var(--color-warning);
+    color: var(--color-dark);
+  }
+  .message.warning .message-body {
+    border-left-color: var(--color-warning);
+  }
+  .message.danger .message-header {
+    background-color: var(--color-danger);
+  }
+  .message.danger .message-body {
+    border-left-color: var(--color-danger);
+  }
+  .message.dark .message-header {
+    background-color: var(--color-dark);
+  }
+  .message.dark .message-body {
+    border-left-color: var(--color-dark);
+  }
+  .message.light .message-header {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+  .message.light .message-body {
+    border-left-color: var(--color-light);
+  }
+  /* Sizes */
+  .message.small {
+    @apply text-sm;
+  }
+  .message.medium {
+    @apply text-base;
+  }
+  .message.large {
+    @apply text-lg;
+  }
+}

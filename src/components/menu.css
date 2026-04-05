@@ -1,0 +1,26 @@
+@layer components {
+  .menu {
+    @apply text-base;
+  }
+  .menu-list {
+    @apply space-y-1;
+  }
+  .menu-list li a {
+    @apply block px-3 py-2 rounded-md transition cursor-pointer;
+    color: var(--color-dark);
+  }
+  .menu-list li a:hover {
+    background-color: var(--color-light);
+  }
+  .menu-list li a.active {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  .menu-label {
+    @apply text-xs uppercase tracking-wider font-semibold mb-2;
+    color: var(--color-grey-dark);
+  }
+  .menu-list ul {
+    @apply pl-4 mt-1 space-y-1;
+  }
+}

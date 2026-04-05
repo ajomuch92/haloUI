@@ -1,0 +1,54 @@
+@layer components {
+  .breadcrumb {
+    @apply list-none flex flex-wrap items-center;
+  }
+  .breadcrumb li {
+    @apply inline-flex items-center;
+  }
+  .breadcrumb li + li::before {
+    content: "/";
+    @apply mx-2;
+    color: var(--color-grey-dark);
+  }
+  .breadcrumb li.active a {
+    @apply cursor-default pointer-events-none;
+    color: var(--color-primary);
+  }
+  .breadcrumb a {
+    @apply transition-colors cursor-pointer;
+    color: var(--color-dark);
+  }
+  .breadcrumb a:hover {
+    color: var(--color-primary);
+  }
+  /* Alternative separators */
+  .breadcrumb.has-arrow-separator li + li::before {
+    content: "→";
+  }
+  .breadcrumb.has-bullet-separator li + li::before {
+    content: "•";
+  }
+  .breadcrumb.has-dot-separator li + li::before {
+    content: "·";
+  }
+  .breadcrumb.has-succeeds-separator li + li::before {
+    content: "›";
+  }
+  /* Alignment */
+  .breadcrumb.centered {
+    @apply justify-center;
+  }
+  .breadcrumb.right {
+    @apply justify-end;
+  }
+  /* Sizes */
+  .breadcrumb.small {
+    @apply text-sm;
+  }
+  .breadcrumb.medium {
+    @apply text-base;
+  }
+  .breadcrumb.large {
+    @apply text-lg;
+  }
+}

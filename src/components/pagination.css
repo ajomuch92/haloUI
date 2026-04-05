@@ -1,0 +1,51 @@
+@layer components {
+  .pagination {
+    @apply flex flex-wrap justify-center items-center gap-2;
+  }
+  .pagination-list {
+    @apply flex flex-wrap gap-1;
+  }
+  .pagination-link,
+  .pagination-previous,
+  .pagination-next,
+  .pagination-ellipsis {
+    @apply inline-flex items-center justify-center min-w-8 h-8 px-2 rounded-md border transition-colors cursor-pointer;
+    background-color: white;
+    border-color: var(--color-grey);
+    color: var(--color-dark);
+  }
+  .pagination-link:hover,
+  .pagination-previous:hover,
+  .pagination-next:hover {
+    background-color: var(--color-light);
+  }
+  .pagination-link.current {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+    cursor: default;
+  }
+  .pagination-previous,
+  .pagination-next {
+    @apply px-4;
+  }
+  .pagination-ellipsis {
+    @apply border-none bg-transparent cursor-default;
+  }
+  /* Sizes */
+  .pagination.small .pagination-link,
+  .pagination.small .pagination-previous,
+  .pagination.small .pagination-next {
+    @apply text-sm h-6 min-w-6;
+  }
+  .pagination.medium .pagination-link,
+  .pagination.medium .pagination-previous,
+  .pagination.medium .pagination-next {
+    @apply text-base h-10 min-w-10;
+  }
+  .pagination.large .pagination-link,
+  .pagination.large .pagination-previous,
+  .pagination.large .pagination-next {
+    @apply text-lg h-12 min-w-12;
+  }
+}

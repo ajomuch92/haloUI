@@ -1,0 +1,39 @@
+@layer components {
+  .panel {
+    @apply rounded-lg shadow-sm overflow-hidden;
+    border: 1px solid var(--color-grey);
+  }
+  .panel-heading {
+    @apply px-4 py-2 font-bold cursor-pointer;
+    background-color: var(--color-light);
+    border-bottom: 1px solid var(--color-grey);
+  }
+  .panel-tabs {
+    @apply flex;
+    border-bottom: 1px solid var(--color-grey);
+  }
+  .panel-tabs a {
+    @apply flex-1 text-center py-2 transition cursor-pointer;
+  }
+  .panel-tabs a:hover {
+    background-color: var(--color-light);
+  }
+  .panel-tabs a.active {
+    @apply border-b-2 font-semibold;
+    border-bottom-color: var(--color-primary);
+  }
+  .panel-block {
+    @apply flex items-center px-4 py-2 transition cursor-pointer;
+    border-bottom: 1px solid var(--color-grey);
+  }
+  .panel-block:hover {
+    background-color: var(--color-light);
+  }
+  .panel-block:last-child {
+    @apply border-b-0;
+  }
+  .panel-icon {
+    @apply mr-2;
+    color: var(--color-grey-dark);
+  }
+}

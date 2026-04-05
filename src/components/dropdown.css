@@ -1,0 +1,36 @@
+@layer components {
+  .dropdown {
+    @apply relative inline-flex;
+  }
+  .dropdown-trigger {
+    @apply inline-block;
+  }
+  .dropdown-menu {
+    @apply absolute top-full left-0 z-10 hidden min-w-48 pt-2;
+  }
+  .dropdown.active .dropdown-menu {
+    @apply block;
+  }
+  .dropdown-content {
+    @apply bg-white rounded-lg shadow-lg overflow-hidden;
+    border: 1px solid var(--color-grey);
+  }
+  .dropdown-item {
+    @apply block px-4 py-2 transition cursor-pointer;
+    color: var(--color-dark);
+  }
+  .dropdown-item:hover {
+    background-color: var(--color-light);
+  }
+  .dropdown-divider {
+    @apply h-px my-1;
+    background-color: var(--color-grey);
+  }
+  /* Positions */
+  .dropdown.right .dropdown-menu {
+    @apply left-auto right-0;
+  }
+  .dropdown.up .dropdown-menu {
+    @apply bottom-full top-auto pt-0 pb-2;
+  }
+}
