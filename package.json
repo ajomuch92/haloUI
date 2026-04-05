@@ -1,14 +1,32 @@
 {
   "name": "haloui",
   "version": "0.1.0",
-  "main": "index.js",
+  "description": "A modern CSS component library inspired by Bulma, built with Tailwind CSS v4",
+  "main": "dist/halo-ui.css",
+  "style": "dist/halo-ui.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "postcss src/halo-ui.css -o dist/halo-ui.css",
+    "watch": "postcss src/halo-ui.css -o dist/halo-ui.css --watch",
+    "dev": "npm run watch",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "halo-ui",
+    "css",
+    "tailwind",
+    "components",
+    "ui",
+    "library"
+  ],
   "author": "ajomuch92",
+  "repository": {
+    "url": "https://github.com/ajomuch92/haloui"
+  },
   "license": "MIT",
-  "description": "",
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.2",
     "postcss": "^8.5.8",
