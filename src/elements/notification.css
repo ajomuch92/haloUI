@@ -1,0 +1,99 @@
+@layer components {
+  .notification {
+    @apply p-4 rounded-lg w-full;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+  .notification:not(:last-child) {
+    @apply mb-4;
+  }
+
+  /* Solid colors */
+  .notification.primary {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  .notification.link {
+    background-color: var(--color-link);
+    color: white;
+  }
+  .notification.info {
+    background-color: var(--color-info);
+    color: white;
+  }
+  .notification.success {
+    background-color: var(--color-success);
+    color: white;
+  }
+  .notification.warning {
+    background-color: var(--color-warning);
+    color: white;
+  }
+  .notification.danger {
+    background-color: var(--color-danger);
+    color: white;
+  }
+  .notification.light {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+  .notification.dark {
+    background-color: var(--color-dark);
+    color: white;
+  }
+  .notification.white {
+    background-color: white;
+    color: var(--color-dark);
+    border: 1px solid var(--color-grey);
+  }
+  .notification.black {
+    background-color: var(--color-black);
+    color: white;
+  }
+
+  /* Light variants (soft background) */
+  .notification.primary.light {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, white);
+    color: var(--color-primary);
+  }
+  .notification.link.light {
+    background-color: color-mix(in srgb, var(--color-link) 10%, white);
+    color: var(--color-link);
+  }
+  .notification.info.light {
+    background-color: color-mix(in srgb, var(--color-info) 10%, white);
+    color: var(--color-info);
+  }
+  .notification.success.light {
+    background-color: color-mix(in srgb, var(--color-success) 10%, white);
+    color: var(--color-success);
+  }
+  .notification.warning.light {
+    background-color: color-mix(in srgb, var(--color-warning) 10%, white);
+    color: var(--color-warning);
+  }
+  .notification.danger.light {
+    background-color: color-mix(in srgb, var(--color-danger) 10%, white);
+    color: var(--color-danger);
+  }
+  .notification.dark.light {
+    background-color: color-mix(in srgb, var(--color-dark) 10%, white);
+    color: var(--color-dark);
+  }
+
+  /* Sizes */
+  .notification.small {
+    @apply text-sm py-2 px-3;
+  }
+  .notification.medium {
+    @apply text-base py-5 px-6;
+  }
+  .notification.large {
+    @apply text-lg py-6 px-8;
+  }
+
+  /* Delete button inside notification */
+  .notification .delete {
+    @apply float-right;
+  }
+}

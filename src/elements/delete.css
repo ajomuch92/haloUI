@@ -1,0 +1,41 @@
+@layer components {
+  .delete {
+    @apply relative inline-flex items-center justify-center w-5 h-5 rounded-full cursor-pointer transition-colors;
+    background-color: var(--color-grey-dark);
+    color: white;
+  }
+  .delete::before,
+  .delete::after {
+    content: '';
+    @apply absolute w-3 h-0.5 bg-white rounded-full;
+    transform: rotate(45deg);
+  }
+  .delete::after {
+    transform: rotate(-45deg);
+  }
+  .delete:hover {
+    background-color: var(--color-danger);
+  }
+  /* Sizes */
+  .delete.small {
+    @apply w-4 h-4;
+  }
+  .delete.small::before,
+  .delete.small::after {
+    @apply w-2 h-0.5;
+  }
+  .delete.medium {
+    @apply w-6 h-6;
+  }
+  .delete.medium::before,
+  .delete.medium::after {
+    @apply w-3.5 h-0.5;
+  }
+  .delete.large {
+    @apply w-8 h-8;
+  }
+  .delete.large::before,
+  .delete.large::after {
+    @apply w-5 h-0.5;
+  }
+}

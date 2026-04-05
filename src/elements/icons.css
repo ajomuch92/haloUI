@@ -1,0 +1,17 @@
+@layer components {
+  .icon {
+    @apply inline-flex items-center justify-center w-6 h-6;
+  }
+  .icon.small {
+    @apply w-4 h-4;
+  }
+  .icon.medium {
+    @apply w-8 h-8;
+  }
+  .icon.large {
+    @apply w-12 h-12;
+  }
+  .icon-text {
+    @apply inline-flex items-center gap-2;
+  }
+}

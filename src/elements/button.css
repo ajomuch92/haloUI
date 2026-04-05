@@ -1,0 +1,168 @@
+@layer components {
+  /* Base button */
+  .button {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded font-medium transition-all duration-200 cursor-pointer;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    color: var(--color-dark);
+    font-size: var(--text-size-normal);
+  }
+  .button:hover {
+    background-color: var(--color-light);
+  }
+
+  /* Sizes */
+  .button.small {
+    @apply px-2 py-1 text-sm rounded-sm;
+  }
+  .button.medium {
+    @apply px-5 py-2.5 text-base;
+  }
+  .button.large {
+    @apply px-6 py-3 text-lg;
+  }
+
+  /* Solid colors */
+  .button.primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
+  .button.primary:hover {
+    filter: brightness(0.92);
+  }
+  .button.link {
+    background-color: var(--color-link);
+    border-color: var(--color-link);
+    color: white;
+  }
+  .button.link:hover {
+    filter: brightness(0.92);
+  }
+  .button.info {
+    background-color: var(--color-info);
+    border-color: var(--color-info);
+    color: white;
+  }
+  .button.success {
+    background-color: var(--color-success);
+    border-color: var(--color-success);
+    color: white;
+  }
+  .button.warning {
+    background-color: var(--color-warning);
+    border-color: var(--color-warning);
+    color: white;
+  }
+  .button.danger {
+    background-color: var(--color-danger);
+    border-color: var(--color-danger);
+    color: white;
+  }
+  .button.light {
+    background-color: var(--color-light);
+    border-color: var(--color-grey);
+    color: var(--color-dark);
+  }
+  .button.dark {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: white;
+  }
+  .button.white {
+    background-color: white;
+    border-color: var(--color-grey);
+    color: var(--color-dark);
+  }
+  .button.black {
+    background-color: var(--color-black);
+    border-color: var(--color-black);
+    color: white;
+  }
+
+  /* Outlined variant */
+  .button.outlined {
+    background-color: transparent;
+    border-color: currentColor;
+  }
+  .button.outlined.primary { color: var(--color-primary); }
+  .button.outlined.primary:hover { background-color: color-mix(in srgb, var(--color-primary) 10%, transparent); }
+  .button.outlined.link { color: var(--color-link); }
+  .button.outlined.info { color: var(--color-info); }
+  .button.outlined.success { color: var(--color-success); }
+  .button.outlined.warning { color: var(--color-warning); }
+  .button.outlined.danger { color: var(--color-danger); }
+  .button.outlined.light { color: var(--color-light); }
+  .button.outlined.dark { color: var(--color-dark); }
+
+  /* Inverted variant (transparent background, color text, invert on hover) */
+  .button.inverted {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .button.inverted.primary { color: var(--color-primary); }
+  .button.inverted.primary:hover { background-color: var(--color-primary); color: white; }
+  .button.inverted.link { color: var(--color-link); }
+  .button.inverted.link:hover { background-color: var(--color-link); color: white; }
+  .button.inverted.info { color: var(--color-info); }
+  .button.inverted.info:hover { background-color: var(--color-info); color: white; }
+  .button.inverted.success { color: var(--color-success); }
+  .button.inverted.success:hover { background-color: var(--color-success); color: white; }
+  .button.inverted.warning { color: var(--color-warning); }
+  .button.inverted.warning:hover { background-color: var(--color-warning); color: white; }
+  .button.inverted.danger { color: var(--color-danger); }
+  .button.inverted.danger:hover { background-color: var(--color-danger); color: white; }
+  .button.inverted.light { color: var(--color-light); }
+  .button.inverted.light:hover { background-color: var(--color-light); color: var(--color-dark); }
+  .button.inverted.dark { color: var(--color-dark); }
+  .button.inverted.dark:hover { background-color: var(--color-dark); color: white; }
+
+  /* Rounded */
+  .button.rounded {
+    @apply rounded-full;
+  }
+
+  /* Fullwidth */
+  .button.fullwidth {
+    @apply w-full;
+  }
+
+  /* Loading state */
+  .button.loading {
+    @apply relative text-transparent pointer-events-none;
+  }
+  .button.loading::after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: halo-spin 0.6s linear infinite;
+  }
+  @keyframes halo-spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  /* Disabled */
+  .button:disabled,
+  .button.disabled {
+    @apply opacity-50 cursor-not-allowed pointer-events-none;
+  }
+
+  /* Text button */
+  .button.text {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-dark);
+  }
+  .button.text:hover {
+    background-color: var(--color-light);
+  }
+  .button.text.primary { color: var(--color-primary); }
+  .button.text.primary:hover { background-color: color-mix(in srgb, var(--color-primary) 10%, transparent); }
+}

@@ -1,0 +1,23 @@
+@layer components {
+  .title {
+    @apply font-bold leading-tight;
+    color: var(--color-dark);
+  }
+  .title.size-1 { @apply text-4xl; }
+  .title.size-2 { @apply text-3xl; }
+  .title.size-3 { @apply text-2xl; }
+  .title.size-4 { @apply text-xl; }
+  .title.size-5 { @apply text-lg; }
+  .title.size-6 { @apply text-base; }
+
+  .subtitle {
+    @apply font-normal leading-normal;
+    color: var(--color-grey-dark);
+  }
+  .subtitle.size-1 { @apply text-3xl; }
+  .subtitle.size-2 { @apply text-2xl; }
+  .subtitle.size-3 { @apply text-xl; }
+  .subtitle.size-4 { @apply text-lg; }
+  .subtitle.size-5 { @apply text-base; }
+  .subtitle.size-6 { @apply text-sm; }
+}

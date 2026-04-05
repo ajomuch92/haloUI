@@ -1,0 +1,77 @@
+@layer components {
+  /* Responsive container */
+  .table-container {
+    @apply w-full overflow-x-auto;
+  }
+
+  /* Base table */
+  .table {
+    @apply w-full border-collapse;
+    background-color: var(--color-white);
+  }
+  .table td,
+  .table th {
+    @apply border px-3 py-2 text-left align-top;
+    border-color: var(--color-grey);
+  }
+  .table th {
+    @apply font-bold;
+  }
+  .table thead td,
+  .table thead th {
+    @apply border-b-2;
+    border-bottom-color: var(--color-grey-dark);
+  }
+  .table tfoot td,
+  .table tfoot th {
+    @apply border-t-2;
+    border-top-color: var(--color-grey-dark);
+  }
+
+  /* Modifiers */
+  .table.striped tbody tr:nth-child(even) {
+    background-color: color-mix(in srgb, var(--color-grey-light) 30%, transparent);
+  }
+  .table.hoverable tbody tr:hover {
+    background-color: var(--color-light);
+  }
+  .table.bordered td,
+  .table.bordered th {
+    @apply border-2;
+  }
+  .table.narrow td,
+  .table.narrow th {
+    @apply px-2 py-1;
+  }
+  .table.fullwidth {
+    @apply w-full;
+  }
+
+  /* Contextual colors for rows/cells */
+  .table .primary { background-color: var(--color-primary); color: white; }
+  .table .link { background-color: var(--color-link); color: white; }
+  .table .info { background-color: var(--color-info); color: white; }
+  .table .success { background-color: var(--color-success); color: white; }
+  .table .warning { background-color: var(--color-warning); color: white; }
+  .table .danger { background-color: var(--color-danger); color: white; }
+  .table .light { background-color: var(--color-light); color: var(--color-dark); }
+  .table .dark { background-color: var(--color-dark); color: white; }
+
+  /* Full rows */
+  .table tr.primary td,
+  .table tr.primary th { background-color: var(--color-primary); color: white; }
+  .table tr.link td,
+  .table tr.link th { background-color: var(--color-link); color: white; }
+  .table tr.info td,
+  .table tr.info th { background-color: var(--color-info); color: white; }
+  .table tr.success td,
+  .table tr.success th { background-color: var(--color-success); color: white; }
+  .table tr.warning td,
+  .table tr.warning th { background-color: var(--color-warning); color: white; }
+  .table tr.danger td,
+  .table tr.danger th { background-color: var(--color-danger); color: white; }
+  .table tr.light td,
+  .table tr.light th { background-color: var(--color-light); color: var(--color-dark); }
+  .table tr.dark td,
+  .table tr.dark th { background-color: var(--color-dark); color: white; }
+}

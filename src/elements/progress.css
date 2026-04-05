@@ -1,0 +1,40 @@
+@layer components {
+  progress {
+    @apply appearance-none block w-full h-3 rounded-full overflow-hidden;
+  }
+  progress::-webkit-progress-bar {
+    @apply rounded-full;
+    background-color: var(--color-grey-light);
+  }
+  progress::-webkit-progress-value {
+    @apply rounded-full transition-all;
+    background-color: currentColor;
+  }
+  progress::-moz-progress-bar {
+    @apply rounded-full transition-all;
+    background-color: currentColor;
+  }
+
+  /* Sizes */
+  progress.small {
+    @apply h-1.5;
+  }
+  progress.medium {
+    @apply h-4;
+  }
+  progress.large {
+    @apply h-6;
+  }
+
+  /* Colors - using currentColor trick for compatibility */
+  progress.primary { color: var(--color-primary); }
+  progress.link { color: var(--color-link); }
+  progress.info { color: var(--color-info); }
+  progress.success { color: var(--color-success); }
+  progress.warning { color: var(--color-warning); }
+  progress.danger { color: var(--color-danger); }
+  progress.dark { color: var(--color-dark); }
+  progress.light { color: var(--color-light); }
+  progress.white { color: white; }
+  progress.black { color: var(--color-black); }
+}
