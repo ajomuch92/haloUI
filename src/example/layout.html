@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout - Halo UI</title>
+    <link rel="stylesheet" href="../../dist/halo-ui.css">
+    <style>
+        body { background: #f8fafc; font-family: system-ui; margin: 0; padding: 2rem; }
+        .demo-section { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .demo-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; border-left: 4px solid #3498db; padding-left: 1rem; }
+        .demo-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 0.75rem; border-radius: 8px; overflow-x: auto; font-family: monospace; font-size: 0.85rem; margin-top: 1rem; position: relative; }
+        .copy-btn { position: absolute; top: 8px; right: 8px; background: #475569; color: white; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer; font-size: 0.7rem; }
+        .copy-btn:hover { background: #334155; }
+        .demo-block { background: #e2e8f0; padding: 1rem; text-align: center; border-radius: 6px; }
+        .hero-demo { background: #3498db; color: white; }
+    </style>
+</head>
+<body>
+<div style="max-width: 1200px; margin: 0 auto;">
+    <a href="index.html" class="button link small" style="margin-bottom: 1rem;">← Back to Home</a>
+    <h1 class="title size-1">Layout</h1>
+
+    <!-- Columns (grid) -->
+    <div class="demo-section">
+        <div class="demo-title">Columns (Grid)</div>
+        <div class="columns">
+            <div class="column"><div class="demo-block">Column 1</div></div>
+            <div class="column"><div class="demo-block">Column 2</div></div>
+            <div class="column"><div class="demo-block">Column 3</div></div>
+        </div>
+        <div class="columns">
+            <div class="column size-3"><div class="demo-block">size-3</div></div>
+            <div class="column size-6"><div class="demo-block">size-6</div></div>
+            <div class="column size-3"><div class="demo-block">size-3</div></div>
+        </div>
+        <div class="columns multiline">
+            <div class="column size-4"><div class="demo-block">4</div></div>
+            <div class="column size-4"><div class="demo-block">4</div></div>
+            <div class="column size-4"><div class="demo-block">4</div></div>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="columns"&gt;
+  &lt;div class="column"&gt;Column&lt;/div&gt;
+  &lt;div class="column size-6"&gt;Half width&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="demo-section">
+        <div class="demo-title">Container</div>
+        <div class="container" style="background: #f1f5f9; padding: 1rem;">This container is centered with auto margins and responsive max-widths.</div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="container"&gt;
+  Centered responsive content
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="demo-section">
+        <div class="demo-title">Hero</div>
+        <div class="hero primary">
+            <div class="hero-body">
+                <h1 class="title size-1">Hero title</h1>
+                <p class="subtitle">Hero subtitle</p>
+            </div>
+        </div>
+        <div class="hero small dark" style="margin-top: 1rem;">
+            <div class="hero-body"><h2>Small dark hero</h2></div>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="hero primary"&gt;
+  &lt;div class="hero-body"&gt;
+    &lt;h1 class="title size-1"&gt;Hero title&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Section -->
+    <div class="demo-section">
+        <div class="demo-title">Section</div>
+        <div class="section" style="background: #f1f5f9;">Normal section (padding 3rem vertical)</div>
+        <div class="section medium" style="background: #e2e8f0; margin-top: 1rem;">Medium section</div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="section"&gt;Normal section&lt;/div&gt;
+&lt;div class="section medium"&gt;Medium section&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Level -->
+    <div class="demo-section">
+        <div class="demo-title">Level</div>
+        <div class="level">
+            <div class="level-left"><div class="level-item"><strong>Left side</strong></div></div>
+            <div class="level-right"><div class="level-item"><button class="button primary">Action</button></div></div>
+        </div>
+        <div class="level mobile">
+            <div class="level-item">Item 1</div>
+            <div class="level-item">Item 2</div>
+            <div class="level-item">Item 3</div>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="level"&gt;
+  &lt;div class="level-left"&gt;
+    &lt;div class="level-item"&gt;Left content&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="level-right"&gt;
+    &lt;div class="level-item"&gt;Right content&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+</div>
+<script>
+function copyCode(btn) {
+    const pre = btn.nextElementSibling;
+    const code = pre.innerText;
+    navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy', 2000);
+    });
+}
+</script>
+</body>
+</html>

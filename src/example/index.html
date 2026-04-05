@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo UI - Component Library</title>
+    <link rel="stylesheet" href="../../dist/halo-ui.css">
+    <style>
+        body {
+            background: var(--color-background);
+            font-family: var(--font-family-sans);
+            margin: 0;
+            padding: 0;
+        }
+        .docs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .docs-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .docs-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-dark);
+        }
+        .docs-header p {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .demo-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .demo-card:hover {
+            transform: translateY(-4px);
+        }
+        .demo-card-header {
+            background: var(--color-primary);
+            color: white;
+            padding: 1rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .demo-card-body {
+            padding: 1.5rem;
+            color: var(--color-text);
+        }
+        .demo-card-footer {
+            background: var(--color-light);
+            padding: 0.75rem 1.5rem;
+            border-top: 1px solid var(--color-border);
+        }
+        .demo-card-footer a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--color-text-light);
+            padding: 2rem;
+            border-top: 1px solid var(--color-border);
+        }
+    </style>
+</head>
+<body>
+    <div class="docs-container">
+        <div class="docs-header">
+            <h1 class="title size-1">Halo UI</h1>
+            <p class="subtitle size-4">A modern component library built with Tailwind CSS v4</p>
+            <p>Flat UI Colors • No "is-" prefix • Fully customizable</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="demo-card">
+                <div class="demo-card-header">🎨 Elements</div>
+                <div class="demo-card-body">
+                    Buttons, content boxes, notifications, tags, progress bars, tables, titles, icons, images, delete buttons.
+                </div>
+                <div class="demo-card-footer">
+                    <a href="elements.html">View examples →</a>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <div class="demo-card-header">🧩 Components</div>
+                <div class="demo-card-body">
+                    Cards, modals, dropdowns, menus, messages, navbar, pagination, panels, tabs, breadcrumbs.
+                </div>
+                <div class="demo-card-footer">
+                    <a href="components.html">View examples →</a>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <div class="demo-card-header">📝 Forms</div>
+                <div class="demo-card-body">
+                    Inputs, textareas, selects, checkboxes, radios, file uploads, datepicker, timepicker.
+                </div>
+                <div class="demo-card-footer">
+                    <a href="form.html">View examples →</a>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <div class="demo-card-header">📐 Layout</div>
+                <div class="demo-card-body">
+                    Columns (grid), container, hero sections, level, media object, footer.
+                </div>
+                <div class="demo-card-footer">
+                    <a href="layout.html">View examples →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Halo UI - Use Bulma-like classes with Tailwind CSS v4</p>
+            <p><a href="#" style="color: var(--color-primary);">GitHub</a> | <a href="#" style="color: var(--color-primary);">Documentation</a></p>
+        </div>
+    </div>
+</body>
+</html>

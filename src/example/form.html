@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Halo UI</title>
+    <link rel="stylesheet" href="../../dist/halo-ui.css">
+    <style>
+        body { background: #f8fafc; font-family: system-ui; margin: 0; padding: 2rem; }
+        .demo-section { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .demo-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; border-left: 4px solid #3498db; padding-left: 1rem; }
+        .demo-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 0.75rem; border-radius: 8px; overflow-x: auto; font-family: monospace; font-size: 0.85rem; margin-top: 1rem; position: relative; }
+        .copy-btn { position: absolute; top: 8px; right: 8px; background: #475569; color: white; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer; font-size: 0.7rem; }
+        .copy-btn:hover { background: #334155; }
+    </style>
+</head>
+<body>
+<div style="max-width: 800px; margin: 0 auto;">
+    <a href="index.html" class="button link small" style="margin-bottom: 1rem;">← Back to Home</a>
+    <h1 class="title size-1">Forms</h1>
+
+    <!-- Basic fields -->
+    <div class="demo-section">
+        <div class="demo-title">Basic Fields</div>
+        <div class="field">
+            <label class="label">Name</label>
+            <div class="control"><input class="input" type="text" placeholder="Your name"></div>
+            <p class="help primary">This is a help text</p>
+        </div>
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left">
+                <input class="input" type="email" placeholder="Email">
+                <span class="icon">✉️</span>
+            </div>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="field"&gt;
+  &lt;label class="label"&gt;Name&lt;/label&gt;
+  &lt;div class="control"&gt;
+    &lt;input class="input" type="text" placeholder="Your name"&gt;
+  &lt;/div&gt;
+  &lt;p class="help primary"&gt;Help text&lt;/p&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Textarea -->
+    <div class="demo-section">
+        <div class="demo-title">Textarea</div>
+        <div class="field">
+            <label class="label">Message</label>
+            <div class="control"><textarea class="textarea" placeholder="Write something..."></textarea></div>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;textarea class="textarea" placeholder="Write..."&gt;&lt;/textarea&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Select -->
+    <div class="demo-section">
+        <div class="demo-title">Select</div>
+        <div class="field">
+            <div class="select"><select><option>Option 1</option><option>Option 2</option></select></div>
+        </div>
+        <div class="field">
+            <div class="select primary"><select><option>Primary select</option></select></div>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="select"&gt;
+  &lt;select&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Checkbox & Radio -->
+    <div class="demo-section">
+        <div class="demo-title">Checkbox & Radio</div>
+        <div class="field">
+            <label class="checkbox"><input type="checkbox"> Accept terms</label>
+        </div>
+        <div class="field">
+            <label class="radio"><input type="radio" name="gender"> Male</label>
+            <label class="radio"><input type="radio" name="gender"> Female</label>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox"&gt; Accept
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="gender"&gt; Male
+&lt;/label&gt;</pre>
+        </div>
+    </div>
+
+    <!-- File -->
+    <div class="demo-section">
+        <div class="demo-title">File Upload</div>
+        <div class="file">
+            <label class="file-label">
+                <input class="file-input" type="file">
+                <span class="file-cta">Choose file</span>
+                <span class="file-name">No file selected</span>
+            </label>
+        </div>
+        <div class="file primary small">
+            <label class="file-label">
+                <input class="file-input" type="file">
+                <span class="file-cta">Upload</span>
+                <span class="file-name">avatar.png</span>
+            </label>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="file"&gt;
+  &lt;label class="file-label"&gt;
+    &lt;input class="file-input" type="file"&gt;
+    &lt;span class="file-cta"&gt;Choose file&lt;/span&gt;
+    &lt;span class="file-name"&gt;No file selected&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Datepicker & Timepicker -->
+    <div class="demo-section">
+        <div class="demo-title">Datepicker (demo)</div>
+        <div class="datepicker active">
+            <input class="input datepicker-input" placeholder="Select date" value="2025-04-05">
+            <div class="datepicker-dropdown">
+                <div class="datepicker-header">
+                    <div class="datepicker-month-select"><div class="select"><select><option>April</option></select></div></div>
+                    <div class="datepicker-year-select"><div class="select"><select><option>2025</option></select></div></div>
+                    <div class="datepicker-nav"><button>◀</button><button>▶</button></div>
+                </div>
+                <div class="datepicker-weekdays"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+                <div class="datepicker-days"><span class="datepicker-day empty">1</span><span class="datepicker-day selected">5</span>...</div>
+            </div>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="datepicker"&gt;
+  &lt;input class="input datepicker-input"&gt;
+  &lt;div class="datepicker-dropdown"&gt;
+    &lt;!-- month/year selectors and days grid --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <div class="demo-title">Timepicker (demo)</div>
+        <div class="timepicker active">
+            <input class="input timepicker-input" placeholder="Select time" value="14:30">
+            <div class="timepicker-dropdown">
+                <div class="timepicker-selectors">
+                    <div class="timepicker-hour"><div class="select"><select><option>02</option></select></div></div>
+                    <span class="timepicker-separator">:</span>
+                    <div class="timepicker-minute"><div class="select"><select><option>30</option></select></div></div>
+                    <div class="timepicker-period"><div class="select"><select><option>PM</option></select></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="timepicker"&gt;
+  &lt;input class="input timepicker-input"&gt;
+  &lt;div class="timepicker-dropdown"&gt;
+    &lt;!-- hour, minute, period selects --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+</div>
+<script>
+function copyCode(btn) {
+    const pre = btn.nextElementSibling;
+    const code = pre.innerText;
+    navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy', 2000);
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements - Halo UI</title>
+    <link rel="stylesheet" href="../../dist/halo-ui.css">
+    <style>
+        body { background: #f8fafc; font-family: system-ui; margin: 0; padding: 2rem; }
+        .demo-section { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .demo-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; border-left: 4px solid #3498db; padding-left: 1rem; }
+        .demo-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 0.75rem; border-radius: 8px; overflow-x: auto; font-family: monospace; font-size: 0.85rem; margin-top: 1rem; position: relative; }
+        .copy-btn { position: absolute; top: 8px; right: 8px; background: #475569; color: white; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer; font-size: 0.7rem; }
+        .copy-btn:hover { background: #334155; }
+        hr { margin: 1rem 0; }
+    </style>
+</head>
+<body>
+<div style="max-width: 1200px; margin: 0 auto;">
+    <a href="index.html" class="button link small" style="margin-bottom: 1rem;">← Back to Home</a>
+    <h1 class="title size-1">Elements</h1>
+
+    <!-- Buttons -->
+    <div class="demo-section">
+        <div class="demo-title">Buttons</div>
+        <div class="demo-row">
+            <button class="button">Normal</button>
+            <button class="button primary">Primary</button>
+            <button class="button link">Link</button>
+            <button class="button info">Info</button>
+            <button class="button success">Success</button>
+            <button class="button warning">Warning</button>
+            <button class="button danger">Danger</button>
+            <button class="button light">Light</button>
+            <button class="button dark">Dark</button>
+        </div>
+        <div class="demo-row">
+            <button class="button small primary">Small</button>
+            <button class="button primary">Normal</button>
+            <button class="button medium primary">Medium</button>
+            <button class="button large primary">Large</button>
+        </div>
+        <div class="demo-row">
+            <button class="button outlined primary">Outlined</button>
+            <button class="button inverted primary">Inverted</button>
+            <button class="button rounded primary">Rounded</button>
+            <button class="button loading primary">Loading</button>
+            <button class="button text primary">Text</button>
+            <button class="button fullwidth primary">Fullwidth</button>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;button class="button primary"&gt;Primary&lt;/button&gt;
+&lt;button class="button outlined primary"&gt;Outlined&lt;/button&gt;
+&lt;button class="button loading primary"&gt;Loading&lt;/button&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="demo-section">
+        <div class="demo-title">Content</div>
+        <div class="content">
+            <h1>Heading 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <ul><li>Unordered list item</li><li>Another item</li></ul>
+            <blockquote>A blockquote example.</blockquote>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="content"&gt;
+  &lt;h1&gt;Heading 1&lt;/h1&gt;
+  &lt;p&gt;Text content...&lt;/p&gt;
+  &lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <div class="demo-section">
+        <div class="demo-title">Notifications</div>
+        <div class="notification primary">Primary notification</div>
+        <div class="notification danger light">Danger light variant</div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="notification primary"&gt;Primary notification&lt;/div&gt;
+&lt;div class="notification danger light"&gt;Danger light variant&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="demo-section">
+        <div class="demo-title">Tags</div>
+        <div class="demo-row">
+            <span class="tag primary">Primary</span>
+            <span class="tag success">Success</span>
+            <span class="tag warning light">Warning light</span>
+            <span class="tag large danger">Large danger</span>
+        </div>
+        <div class="tags">
+            <span class="tag">One</span>
+            <span class="tag">Two</span>
+            <span class="tag">Three</span>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;span class="tag primary"&gt;Primary&lt;/span&gt;
+&lt;div class="tags"&gt;
+  &lt;span class="tag"&gt;One&lt;/span&gt;
+  &lt;span class="tag"&gt;Two&lt;/span&gt;
+&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="demo-section">
+        <div class="demo-title">Progress Bars</div>
+        <progress class="progress primary" value="45" max="100">45%</progress>
+        <progress class="progress small success" value="60" max="100">60%</progress>
+        <progress class="progress large danger" value="80" max="100">80%</progress>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;progress class="progress primary" value="45" max="100"&gt;45%&lt;/progress&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="demo-section">
+        <div class="demo-title">Tables</div>
+        <div class="table-container">
+            <table class="table striped hoverable bordered">
+                <thead><tr><th>Name</th><th>Age</th></tr></thead>
+                <tbody>
+                    <tr><td>Alice</td><td>25</td></tr>
+                    <tr class="primary"><td>Bob</td><td>30</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;table class="table striped hoverable bordered"&gt;...&lt;/table&gt;</pre>
+        </div>
+    </div>
+
+    <!-- Delete, Icon, Image, Title... (shortened for brevity, but include similar blocks) -->
+    <div class="demo-section">
+        <div class="demo-title">Delete Button</div>
+        <div class="demo-row">
+            <div class="delete"></div>
+            <div class="delete small"></div>
+            <div class="delete medium"></div>
+            <div class="delete large"></div>
+        </div>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;div class="delete"&gt;&lt;/div&gt;</pre>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <div class="demo-title">Titles</div>
+        <h1 class="title size-1">Title 1</h1>
+        <p class="subtitle size-4">Subtitle</p>
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre>&lt;h1 class="title size-1"&gt;Title 1&lt;/h1&gt;
+&lt;p class="subtitle size-4"&gt;Subtitle&lt;/p&gt;</pre>
+        </div>
+    </div>
+</div>
+<script>
+function copyCode(btn) {
+    const pre = btn.nextElementSibling;
+    const code = pre.innerText;
+    navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy', 2000);
+    });
+}
+</script>
+</body>
+</html>
