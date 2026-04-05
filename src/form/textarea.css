@@ -1,6 +1,6 @@
 @layer components {
   .textarea {
-    @apply block w-full px-3 py-2 rounded-md border transition focus:outline-none focus:ring-2 resize-vertical;
+    @apply block w-full px-3 py-2 rounded-md border transition focus:outline-none focus:ring-2 resize-y;
     background-color: white;
     border-color: var(--color-grey);
     color: var(--color-dark);

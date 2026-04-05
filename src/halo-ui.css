@@ -35,7 +35,7 @@
 @import "./form/timepicker.css";
 
 /* Layout */
-@import "./layout/columns.css";
+@import "./layout/column.css";
 @import "./layout/container.css";
 @import "./layout/hero.css";
 @import "./layout/section.css";
