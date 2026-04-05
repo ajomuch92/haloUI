@@ -1,0 +1,32 @@
+@layer components {
+  .level {
+    @apply flex items-center justify-between flex-wrap gap-4;
+  }
+  .level-item {
+    @apply flex items-center flex-1 justify-center;
+  }
+  .level-left,
+  .level-right {
+    @apply flex items-center gap-4;
+  }
+  .level-left {
+    @apply justify-start;
+  }
+  .level-right {
+    @apply justify-end;
+  }
+
+  /* Mobile vertical stack (not mobile by default) */
+  @media (max-width: 768px) {
+    .level:not(.mobile) {
+      @apply flex-col items-stretch;
+    }
+    .level:not(.mobile) .level-left,
+    .level:not(.mobile) .level-right {
+      @apply justify-center;
+    }
+  }
+  .level.mobile {
+    @apply flex-row;
+  }
+}

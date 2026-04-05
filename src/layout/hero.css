@@ -1,0 +1,63 @@
+@layer components {
+  .hero {
+    @apply py-12;
+    background-color: var(--color-light);
+  }
+  .hero-body {
+    @apply container mx-auto px-4;
+  }
+
+  /* Sizes */
+  .hero.small {
+    @apply py-8;
+  }
+  .hero.medium {
+    @apply py-24;
+  }
+  .hero.large {
+    @apply py-48;
+  }
+
+  /* Colors */
+  .hero.primary {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  .hero.primary .title,
+  .hero.primary .subtitle {
+    color: white;
+  }
+  .hero.link {
+    background-color: var(--color-link);
+    color: white;
+  }
+  .hero.info {
+    background-color: var(--color-info);
+    color: white;
+  }
+  .hero.success {
+    background-color: var(--color-success);
+    color: white;
+  }
+  .hero.warning {
+    background-color: var(--color-warning);
+    color: white;
+  }
+  .hero.danger {
+    background-color: var(--color-danger);
+    color: white;
+  }
+  .hero.dark {
+    background-color: var(--color-dark);
+    color: white;
+  }
+  .hero.light {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+
+  /* Fullheight */
+  .hero.fullheight {
+    @apply min-h-screen;
+  }
+}
