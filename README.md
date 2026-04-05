@@ -39,7 +39,7 @@ Then use the style classes:
 ## Customization
 
 CSS variables are defined in :root. Override the ones you need:
-
+```css
 :root {
   --color-primary: #4f46e5;
   --color-secondary: #64748b;
@@ -47,6 +47,7 @@ CSS variables are defined in :root. Override the ones you need:
   --color-danger: #ef4444;
   /* ... */
 }
+```
 
 ## License
 
